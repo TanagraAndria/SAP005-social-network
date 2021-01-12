@@ -10,7 +10,7 @@ import {
   commentPosts,
 } from './data.js';
 
-// Funções auxiliares chamadas na criação do template da página (function generalFeed())
+
 const setLogOutOnButton = () => {
   document.querySelector('.signOut').addEventListener('click', (event) => {
     event.preventDefault();
@@ -104,6 +104,21 @@ const loadPostTemplate = (postList) => {
     postBox.innerHTML = `
   <data value=${code}></data>
   <header class='title-post-box'>
+    <div class='share-and-post'>
+          <section class='share-area'>
+            <textarea id='postText' placeholder='O que você quer compartilhar?'></textarea>
+            <div class='share-area-buttons'>
+            <button id='publish-img-btn' class='camera'><img class='icon-circle' src='../../img/camera.png'></button>
+              <div class='publish-img-form-box transparency'>
+                <form method="post">
+                  <input type="file" id="image_uploads" class='share-area-img-btn' accept=".jpg, .jpeg, .png">
+                </form>
+              </div>
+              <button id='publish-btn' class='btn btn-small publish-btn purple'>Publicar</button>
+            </div>
+          </section>
+          <section id='post-area' class='posts-container'>
+          </section>
     <div>
       <div>${user}</div>
       <div>${data}</div>
@@ -138,10 +153,7 @@ const loadPostTemplate = (postList) => {
     <section class='footer-post-comments-box'>
     <div class='comments-box comments-box-textarea'>
       <textarea placeholder='Deixe seu comentário' id="text-comment"></textarea>
-      <br>
-      <button aria-disabled="true" class="send-comment" tabindex="-1" data-visualcompletion="ignore" dir="auto" id="send-comment"><img src='./img/submit.png' alt='Enviar Comentário' class=''>Enviar</button>
-      
-       
+      <br><button id="send-comment">Enviar</button>
     </div>
     ${(comments.length > 0 && comments.map((comment) => `
     <div class='comments-box'>
@@ -173,10 +185,10 @@ export const generalFeed = () => {
   <header>
     <nav class='navbar-page-feed'>
       <figure class='navbar-page-item-logo'>
-        <img class='icon-logo' src='../../img/security.png' alt="Logotipo">
-      </figure>                     
+        <img class='icon-logo' src='./img/security' alt="Logotipo">
+      </figure>
       <div>
-        <button class='circle signOut yellow'>
+        <button class='circle signOut'>
         <img class='icon-circle' src='../../img/logout.png'>
         </button>
       </div>
@@ -184,7 +196,7 @@ export const generalFeed = () => {
   </header>
   <div class='box-feed'>
     <section class='profile-area'>
-      <div class='profile-area-theme'><img class='theme-image' src='../../img/capa.jpeg'></div>
+      <div class='profile-area-theme'><img class='theme-image' src='../../img/capa.jpg'></div>
         <figure class='profile-area-photo-box'>
            <img class='photo'>
            <input type="file" id="input-file-profileImg" class='input-file-profileImg transparency' accept=".jpg, .jpeg, .png">
@@ -193,21 +205,7 @@ export const generalFeed = () => {
           <h3 id='name-user'></h3>
         </div>
     </section>
-      <div class='share-and-post'>
-        <section class='share-area'>
-          <textarea id='postText' placeholder='O que você quer compartilhar?'></textarea>
-           <div class='share-area-buttons'>
-            <button id='publish-img-btn' class='circle violet'><img class='icon-circle' src='../../img/camera.png'></button>
-            <div class='publish-img-form-box transparency'>
-              <form method="post">
-                <input type="file" id="image_uploads" class='share-area-img-btn' accept=".jpg, .jpeg, .png">
-               </form>
-            </div>
-            <button id='publish-btn' class='btn btn-small publish-btn purple'>Publicar</button>
-          </div>
-        </section>
-        <section id='post-area' class='posts-container'>
-        </section>
+      
       </div>
   </div>
   `;

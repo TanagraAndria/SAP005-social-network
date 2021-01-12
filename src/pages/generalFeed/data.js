@@ -8,7 +8,7 @@ export const logOut = () => {
     .auth()
     .signOut()
     .then(() => {
-      window.location.hash = '#login';
+      window.location.pathname = '/';
     })
     .catch((error) => error);
 };
@@ -125,4 +125,11 @@ export const commentPosts = (postID, textContent) => {
         text: textContent,
       }),
     });
+};
+
+export const setLogOutOnButton = () => {
+  document.querySelector('.signOut').addEventListener('click', (event) => {
+    event.preventDefault();
+    logOut();
+  });
 };
