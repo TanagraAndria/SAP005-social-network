@@ -26,18 +26,20 @@ export const Login = () => {
   </div>    
   `;
 
-  const signInButton = rootElement.querySelector('.signIn');
+  const email = rootElement.querySelector('#emailArea');
+  const password = rootElement.querySelector('#passwordArea');
+
+  const signInButton = rootElement.querySelector('#start');
   signInButton.addEventListener('click', (event) => {
     event.preventDefault();
-    signIn(
-      rootElement.querySelector('#emailArea').value,
-      rootElement.querySelector('#passwordArea').value,
-    );
+    signIn(email.value, password.value);
+    email.value = '';
+    password.value = '';
     onNavigate('/generalFeed');
   });
 
-  const googleButton = rootElement.querySelector('.btnGoogle');
-  googleButton.addEventListener('click', () => {
+  const googleBtn = rootElement.querySelector('.btnGoogle');
+  googleBtn.addEventListener('click', () => {
     loginWithGoogle();
   });
 
