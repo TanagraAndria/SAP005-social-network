@@ -67,7 +67,6 @@ export const readPost = (callbackToManipulatePostList) => {
           url,
         });
       });
-      // a callback é substituída pela função resetPost na chamada da função
       callbackToManipulatePostList(post);
     });
 };
