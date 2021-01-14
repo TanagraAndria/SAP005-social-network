@@ -1,4 +1,4 @@
- import { Login } from './index.js';
+import { Login } from './index.js';
 
 describe('Login', () => {
   it('should be a function', () => {
