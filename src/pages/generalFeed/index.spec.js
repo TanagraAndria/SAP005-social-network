@@ -1,13 +1,7 @@
-import { likePosts, commentPosts } from './data.js';
+import { generalFeed } from './index.js';
 
-describe('Verificar se likePosts é uma função', () => {
-  it('likePosts é uma função', () => {
-    expect(typeof likePosts).toBe('function');
-  });
-});
-
-describe('Verificar se commentPosts é uma função', () => {
-  it('commentPosts é uma função', () => {
-    expect(typeof commentPosts).toBe('function');
+describe('generalFeed', () => {
+  it('should be a function', () => {
+    expect(typeof generalFeed).toBe('function');
   });
 });

@@ -1,4 +1,4 @@
-import { signIn, loginWithGoogle } from './data.js';
+import { loginWithGoogle } from './data.js';
 import { onNavigate } from '../../utils/history.js';
 
 export const Login = () => {
