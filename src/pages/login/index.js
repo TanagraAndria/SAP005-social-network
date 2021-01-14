@@ -6,24 +6,23 @@ export const Login = () => {
   rootElement.setAttribute('class', 'box');
   rootElement.innerHTML = `
   <div class='box-item'>
-    <h1><img src='./img/logo.png' alt='Logotype' class='logos-home'></h1>
-    <img src='../../img/pessoas.png' alt='Logotype' class='logos-home'>
-    </div>
-    <div class='box-item'>
-    <h3>BEM VINDO (A)</h3>
-    <form method='post'>
-      <input required="" autocomplete="off" type='email' placeholder='Email' id='emailArea' class='login-area'>
-      <input required="" autocomplete="off" type='password' placeholder='Senha' id='passwordArea' class='login-area'>
-    </form>
-    <div class="inerror-message" id="error-login"> </div>
-    <button class='button-area btn signIn' id='start'>Entrar</button>
-    <p class="or-area">━━━━━━━━━ OU ━━━━━━━━━</p>
-    <button class='button-area btn btnGoogle'><img src='./img/google-icon.png' alt='Google'
-        class='google-icon'>  Entrar com o Google</button>
-    <p class='font-small'>Se não tem um conta, <a href='/#signup' style="color:black;font-weight: 600"
-        id='sign-up-login'>REGISTRE-SE.</a>
-    </p>
-  </div>    
+  <h1><img src='./img/logo.png' alt='Logotype' class='logos-home'></h1>
+  <img src='../../img/pessoas.png' alt='Logotype' class='logos-home'>
+</div>
+<div class='box-item'>
+  <h3>BEM VINDO (A)</h3>
+  <form method='post'>
+    <input required="" autocomplete="off" type='email' placeholder='Email' id='emailArea' class='login-area'>
+    <input required="" autocomplete="off" type='password' placeholder='Senha' id='passwordArea' class='login-area'>
+  </form>
+  <button class='button-area btn signIn' id='start'>Entrar</button>
+  <p class="or-area">━━━━━━━━━ OU ━━━━━━━━━</p>
+  <button class='button-area btn btnGoogle'><img src='./img/google-icon.png' alt='Google' class='google-icon'> Entrar
+    com o Google</button>
+  <p class='font-small'>Se não tem um conta, <a href='/#signup' style="color:black;font-weight: 600"
+      id='sign-up-login'>REGISTRE-SE.</a>
+  </p>
+</div>  
   `;
 
   const email = rootElement.querySelector('#emailArea');
@@ -35,7 +34,6 @@ export const Login = () => {
     signIn(email.value, password.value);
     email.value = '';
     password.value = '';
-    onNavigate('/generalFeed');
   });
 
   const googleBtn = rootElement.querySelector('.btnGoogle');

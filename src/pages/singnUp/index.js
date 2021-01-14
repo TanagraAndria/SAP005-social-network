@@ -10,16 +10,18 @@ export const SignUp = () => {
 
 </div>
 
-  <div class='box-item'>
-    <h3>CRIAR UMA NOVA CONTA</h3>
-    <form method='post'>
-      <input required="required" autocomplete="off" type="text" placeholder="Insira seu nome" id="username" class='login-area'>
-      <input required="required" autocomplete="off" type="email" placeholder="example@example.com" id="register-email" class="login-area">
-      <input required="required" autocomplete="off" type="password" placeholder="Insira uma senha (Min. 6 digítos)" id="register-password" class="login-area">
-      <div class="error-message" id="singup-error">
-      </div>
-      <button class="btn button-area" id="button-register">Cadastre-se</button>
-       </form>
+<div class='box-item'>
+  <h3>CRIAR UMA NOVA CONTA</h3>
+  <form method='post'>
+    <input required="required" autocomplete="off" type="text" placeholder="Insira seu nome" id="username"
+      class='login-area'>
+    <input required="required" autocomplete="off" type="email" placeholder="example@example.com" id="register-email"
+      class="login-area">
+    <input required="required" autocomplete="off" type="password" placeholder="Insira uma senha (Min. 6 digítos)"
+      id="register-password" class="login-area">
+    <div></div>
+    <button class="btn button-area" id="button-register">Cadastre-se</button>
+  </form>
 </div>
 
 `;
