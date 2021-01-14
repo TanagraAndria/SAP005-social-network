@@ -16,7 +16,7 @@ export const signIn = (email, password) => {
       console.log(errorMessage);
       alert(msgError);
       // ...
-      // eslint-disable-next-line no-unused-expressions
+    // eslint-disable-next-line no-unused-expressions
     }); email - password.html;
 };
 
