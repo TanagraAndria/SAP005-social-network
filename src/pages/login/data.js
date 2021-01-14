@@ -6,7 +6,7 @@ export const signIn = (email, password) => {
     .then(() => {
       const name = firebase.auth().currentUser.displayName;
       alert(`Olá, ${name}!`);
-      window.location.hash = onNavigate('/generalFeed');
+      window.location.pathname = onNavigate('/generalFeed');
     })
     .catch((error) => {
       const errorCode = error.code;

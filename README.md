@@ -6,7 +6,7 @@
 - [1. Introdução](#1-introdução)
 - [2. Resumo do projeto](#2-resumo-do-projeto)
 - [3. Personas](#3-personas)
-- [4. Considerações gerais](#4-considerações-gerais)
+- [4. Protótipos](#4-protótipos)
 
 ---
 
@@ -25,3 +25,5 @@ Na SECURITY PET o usuário terá contato com profissionais da voltados a todo ti
 
 ### 3. Personas
 ![alt text](src/img/personas.png)
+
+### 4. Protótipos
