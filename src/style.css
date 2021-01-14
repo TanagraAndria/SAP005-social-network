@@ -92,7 +92,7 @@ textarea {
 	margin-left: 10px;
 }
 
-.post-area-icon-del	{
+.post-area-icon-del {
 	height: 15px;
 	width: 15px;
 	margin-left: 5px;
@@ -175,15 +175,13 @@ textarea {
 	padding: 15px 30px;
 }
 
-.div-send-comment{
-    width: 100%;
-    text-align: center;
-    padding-top: 7px;
+.div-send-comment {
+	width: 100%;
+	text-align: center;
+	padding-top: 7px;
 }
 
-
 .name-profile-area {
-	
 	text-align: center;
 	font-family: Arial;
 }
@@ -194,12 +192,12 @@ textarea {
 
 .photo {
 	width: 120px;
-    height: 113px;
-    border-radius: 89px;
-    border: 1px solid black;
+	height: 113px;
+	border-radius: 89px;
+	border: 1px solid black;
 	background-image: url(img/avatar.jpg);
 	background-color: white;
-    outline: none;
+	outline: none;
 }
 
 .photo:hover {
@@ -214,7 +212,6 @@ textarea {
 	border: 1px solid lightgrey;
 	border-radius: 3px;
 	outline: 0;
-
 }
 
 .share-area,
@@ -299,9 +296,9 @@ textarea {
 	outline: none;
 	background-color: transparent;
 	margin-left: 5px;
-    height: 20px;
-    width: 20px;
-    margin-right: 5px;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
 }
 
 .post-area-icon-del:hover {
@@ -391,7 +388,6 @@ textarea {
 	display: none;
 }
 
-
 /* SOCIAL PANEL CSS */
 
 .social-panel-container {
@@ -406,7 +402,7 @@ textarea {
 	transform: translateX(-10px);
 }
 
-.social-panel {	
+.social-panel {
 	background-color: #fff;
 	border-radius: 16px;
 	box-shadow: 0 16px 31px -17px #9a55a6;
@@ -417,7 +413,7 @@ textarea {
 	align-items: center;
 	font-family: 'Muli';
 	position: relative;
-	height: 430px;	
+	height: 430px;
 	width: 370px;
 	max-width: calc(100% - 10px);
 	z-index: 999;
@@ -464,9 +460,9 @@ textarea {
 
 .social-panel h4 {
 	margin: 20px 0;
-	color: #9a55a6;	
-	font-family: 'Muli';	
-	font-size: 14px;	
+	color: #9a55a6;
+	font-family: 'Muli';
+	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
 }
@@ -503,7 +499,7 @@ textarea {
 	border-radius: 26.5px;
 	background-color: #9a55a6;
 	border: 1px solid #9a55a6;
-	box-shadow: 0 16px 22px -17px #03153B;
+	box-shadow: 0 16px 22px -17px #03153b;
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
@@ -541,4 +537,3 @@ textarea {
 	text-decoration: none;
 	font-weight: 300;
 }
-

@@ -120,7 +120,7 @@ const loadPostTemplate = (postList) => {
   <footer class='footer-post-box'>
     <section class='footer-post-icons-box'>
       <div class='footer-post-icons-items'>
-        <img class='post-area-icon' id="like-icon" src="../../img/like2.png" alt="Like Icon">
+        <img class='post-area-icon' id="like-icon" src="../../img/like.png" alt="Like Icon">
         <div id='likes-counter'>${likes.length}</div> 
         <div>
         
