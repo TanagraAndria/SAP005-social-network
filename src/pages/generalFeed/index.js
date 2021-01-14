@@ -10,7 +10,6 @@ import {
   commentPosts,
 } from './data.js';
 
-
 const setLogOutOnButton = () => {
   document.querySelector('.signOut').addEventListener('click', (event) => {
     event.preventDefault();
@@ -104,31 +103,12 @@ const loadPostTemplate = (postList) => {
     postBox.innerHTML = `
   <data value=${code}></data>
   <header class='title-post-box'>
-    <div class='share-and-post'>
-          <section class='share-area'>
-            <textarea id='postText' placeholder='O que você quer compartilhar?'></textarea>
-            <div class='share-area-buttons'>
-            <button id='publish-img-btn' class='camera'><img class='icon-circle' src='../../img/camera.png'></button>
-              <div class='publish-img-form-box transparency'>
-                <form method="post">
-                  <input type="file" id="image_uploads" class='share-area-img-btn' accept=".jpg, .jpeg, .png">
-                </form>
-              </div>
-              <button id='publish-btn' class='btn btn-small publish-btn purple'>Publicar</button>
-            </div>
-          </section>
-          <section id='post-area' class='posts-container'>
-          </section>
     <div>
       <div>${user}</div>
       <div>${data}</div>
     </div>
-    <div>
-      <button class='delete-btn' data-id='${code}'><img class='post-area-icon-del' src="../../img/quit.png" alt="Edit Icon">
-      </button>
-    </div>
+   
   </header>
-
   <textarea disabled class='text post-area-text'>${text}</textarea>
   <div>${url}<div>
   <div class='save-btn-area display-none'>
@@ -140,6 +120,8 @@ const loadPostTemplate = (postList) => {
       <div class='footer-post-icons-items'>
         <img class='post-area-icon' id="like-icon" src="../../img/like.png" alt="Like Icon">
         <div id='likes-counter'>${likes.length}</div> 
+        <div>
+           </div>
       </div>
        
       <div class='footer-post-icons-items'>
@@ -148,12 +130,20 @@ const loadPostTemplate = (postList) => {
       </div>
       
       <div class='edit-btn'><img class='post-area-icon' src="../../img/pencil.png" alt="Edit Icon"></div>
+      <button class='delete-btn' data-id='${code}'><img class='post-area-icon-del' src="../../img/quit.png" alt="Edit Icon">
+        </button>
     </section>
-
     <section class='footer-post-comments-box'>
     <div class='comments-box comments-box-textarea'>
-      <textarea placeholder='Deixe seu comentário' id="text-comment"></textarea>
-      <br><button id="send-comment">Enviar</button>
+      <textarea required placeholder='Deixe seu comentário' id="text-comment"></textarea>
+      <br>
+      <div class="div-send-comment">
+      <button aria-disabled="true" class="send-comment" tabindex="-1" data-visualcompletion="ignore" 
+      dir="auto" id="send-comment">
+      <img src='./img/submit.png' alt='Enviar Comentário' class='comment-icon'>
+            </button>
+            </div>
+       
     </div>
     ${(comments.length > 0 && comments.map((comment) => `
     <div class='comments-box'>
@@ -162,12 +152,9 @@ const loadPostTemplate = (postList) => {
     </div>
      `)) || ''}
     </section>
-  </footer>
-  `;
-
+    `;
     postBox.querySelector('#send-comment').addEventListener('click', () => commentPosts(code, postBox.querySelector('#text-comment').value));
     postBox.querySelector('#like-icon').addEventListener('click', () => likePosts(code));
-
     postBox.classList.add('post-area');
     document.querySelector('#post-area').appendChild(postBox);
 
@@ -176,8 +163,6 @@ const loadPostTemplate = (postList) => {
     setEditPostClick(postBox);
   });
 };
-
-// Função executada com o carregamento da página:
 export const generalFeed = () => {
   document.querySelector('#root').innerHTML = '';
   const containerFeed = document.createElement('div');
@@ -185,8 +170,8 @@ export const generalFeed = () => {
   <header>
     <nav class='navbar-page-feed'>
       <figure class='navbar-page-item-logo'>
-        <img class='icon-logo' src='./img/security' alt="Logotipo">
-      </figure>
+        <img class='icon-logo' src='../../img/security.png' alt="Logotipo">
+      </figure>                     
       <div>
         <button class='circle signOut'>
         <img class='icon-circle' src='../../img/logout.png'>
@@ -195,20 +180,40 @@ export const generalFeed = () => {
     </nav>
   </header>
   <div class='box-feed'>
-    <section class='profile-area'>
-      <div class='profile-area-theme'><img class='theme-image' src='../../img/capa.jpg'></div>
+      <div class='share-and-post'>
+      <section class='profile-area'>
+      <div class='profile-area-theme'><img class='theme-image' src='../../img/capa.jpeg'></div>
         <figure class='profile-area-photo-box'>
+        
            <img class='photo'>
-           <input type="file" id="input-file-profileImg" class='input-file-profileImg transparency' accept=".jpg, .jpeg, .png">
+           <input required type="file" id="input-file-profileImg" class='input-file-profileImg transparency' accept=".jpg, .jpeg, .png">
         </figure>
         <div class='name-profile-area'>
           <h3 id='name-user'></h3>
         </div>
     </section>
-      
+        <section class='share-area'>
+         
+          <textarea  id='postText' placeholder='O que você quer compartilhar?'></textarea>
+          
+          <div class='share-area-buttons'>
+           
+            <button id='publish-img-btn' class='circle violet'><img class='icon-circle' src='../../img/camera.png'></button>
+            <div class='publish-img-form-box transparency'>
+              <form method="post">
+                <input required type="file" id="image_uploads" class='share-area-img-btn' accept=".jpg, .jpeg, .png">
+               </form>
+            </div>
+            <button aria-disabled="true" tabindex="-1" id='publish-btn' class='btn btn-small publish-btn purple'>Publicar</button>
+            
+          </div>
+        </section>
+        <section id='post-area' class='posts-container'>
+        </section>
       </div>
   </div>
   `;
+
   document.querySelector('#root').appendChild(containerFeed);
 
   setLogOutOnButton();

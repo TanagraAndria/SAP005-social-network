@@ -33,7 +33,7 @@ export const Login = () => {
       rootElement.querySelector('#emailArea').value,
       rootElement.querySelector('#passwordArea').value,
     );
-    onNavigate('/signup');
+    onNavigate('/generalFeed');
   });
 
   const googleButton = rootElement.querySelector('.btnGoogle');
@@ -50,25 +50,3 @@ export const Login = () => {
 
   return rootElement;
 };
-
-//   const googleButton = rootElement.querySelector('.btnGoogle');
-//   googleButton.addEventListener('click', () => {
-//     loginWithGoogle();
-//   });
-
-//   const signInButton = rootElement.querySelector('.signIn');
-//   signInButton.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     signIn(
-//       rootElement.querySelector('#emailArea').value,
-//       rootElement.querySelector('#passwordArea').value,
-//     );
-//   });
-//   const linkSignUp = rootElement.querySelector('#sign-up-login');
-//   linkSignUp.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     onNavigate('/signup');
-//   });
-
-//   return rootElement;
-// };

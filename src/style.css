@@ -19,6 +19,7 @@ input {
 textarea {
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: transparent;
+	outline: 0;
 	resize: none;
 }
 
@@ -76,7 +77,6 @@ textarea {
 }
 
 .logos-home {
-	/*icon-large*/
 	width: 220px;
 	height: 150px;
 }
@@ -86,13 +86,17 @@ textarea {
 	padding-top: 30px;
 }
 
-.post-area-icon-del,
 .google-icon {
+	height: 15px;
+	width: 15px;
+	margin-left: 10px;
+}
+
+.post-area-icon-del {
 	height: 15px;
 	width: 15px;
 	margin-left: 5px;
 }
-
 .login-area {
 	margin-top: 12px;
 	padding: 14px 16px;
@@ -135,6 +139,7 @@ textarea {
 	margin: 10px 30px;
 	border: 1px solid lightgrey;
 	border-radius: 3px;
+	outline: 0;
 }
 
 .share-area,
@@ -142,15 +147,14 @@ textarea {
 	height: fit-content;
 }
 
-.circle,
-.camera {
+.circle {
 	width: 30px;
 	height: 30px;
 	border: none;
 	border-radius: 15px;
 }
 
-.camera:hover {
+.circle:hover {
 	opacity: 0.6;
 }
 
@@ -159,10 +163,9 @@ textarea {
 	width: 150px;
 }
 
-.icon-signOut {
-	width: 20px;
-	height: 20px;
-	margin-top: 2px;
+.icon-circle {
+	width: 30px;
+	outline: none;
 }
 
 .profile-area,
@@ -172,21 +175,29 @@ textarea {
 	padding: 15px 30px;
 }
 
-.name-profile-area {
+.div-send-comment {
 	width: 100%;
 	text-align: center;
+	padding-top: 7px;
+}
+
+.name-profile-area {
+	text-align: center;
+	font-family: Arial;
 }
 
 .profile-area-photo-box {
 	width: 83px;
-	overflow: hidden;
 }
 
 .photo {
-	width: 63px;
-	height: 63px;
-	border-radius: 34px;
+	width: 120px;
+	height: 113px;
+	border-radius: 89px;
 	border: 1px solid black;
+	background-image: url(img/avatar.jpg);
+	background-color: white;
+	outline: none;
 }
 
 .photo:hover {
@@ -200,7 +211,7 @@ textarea {
 	padding: 10px;
 	border: 1px solid lightgrey;
 	border-radius: 3px;
-	resize: none;
+	outline: 0;
 }
 
 .share-area,
@@ -214,6 +225,7 @@ textarea {
 	width: 100%;
 	height: 120px;
 	margin-bottom: 15px;
+	resize: none;
 }
 
 .share-area-buttons {
@@ -242,7 +254,7 @@ textarea {
 
 .title-post-box {
 	font-size: 0.8em;
-	background-color: lightgray;
+	background-color: rgb(203, 239, 250);
 	display: flex;
 	justify-content: space-between;
 }
@@ -271,6 +283,10 @@ textarea {
 	margin-right: 5px;
 }
 
+.comment-icon:hover {
+	opacity: 0.6;
+}
+
 .post-area-icon:hover {
 	opacity: 0.6;
 }
@@ -279,6 +295,10 @@ textarea {
 	border: none;
 	outline: none;
 	background-color: transparent;
+	margin-left: 5px;
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
 }
 
 .post-area-icon-del:hover {
@@ -292,8 +312,6 @@ textarea {
 	padding-right: 40px;
 	padding-bottom: 7px;
 }
-
-/*-------------------------------------*/
 
 .footer-post-box {
 	display: flex;
@@ -319,6 +337,8 @@ textarea {
 
 .comments-box-textarea {
 	border-bottom: 1px solid lightgray;
+	outline: 0;
+	resize: none;
 }
 
 #text-comment {
@@ -328,15 +348,22 @@ textarea {
 }
 
 .send-comment {
-	margin: 8px auto;
-	background-color: #9a55a6;
-	color: white;
-	outline: none;
-	border: solid #9a55a6;
+	border: solid WHITE;
+	width: 100px;
 	border-radius: 20px;
 	padding: 5px;
 	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+	outline: none;
 	font-weight: 600;
+	color: white;
+	background-color: #9a55a6;
+	margin-left: 5px;
+}
+
+.comment-icon {
+	height: 20px;
+	width: 20px;
+	margin-right: 5px;
 }
 
 .comments-box-name {
@@ -349,8 +376,6 @@ textarea {
 	display: none;
 }
 
-/*-------------------------------------*/
-
 .transparency {
 	opacity: 0;
 }
@@ -361,4 +386,152 @@ textarea {
 
 .display-none {
 	display: none;
+}
+
+/* SOCIAL PANEL CSS */
+
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {
+	background-color: #fff;
+	border-radius: 16px;
+	border: 5px solid #fe4bef;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 430px;
+	width: 370px;
+	max-width: calc(100% - 10px);
+	z-index: 999;
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #d312b9;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #9a55a6;
+	border-radius: 0 0 10px 10px;
+	color: white;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: white;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #9a55a6;
+	font-family: 'Muli';
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #fff23e;
+	border-radius: 50%;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #fff23e;
+	box-shadow: 0 9px 12px -9px orange;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #9a55a6;
+	border: 1px solid #9a55a6;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #fff23e;
+	color: gray;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #9a55a6;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.floating-text a {
+	color: #fff23e;
+	text-decoration: none;
+	font-weight: 300;
 }

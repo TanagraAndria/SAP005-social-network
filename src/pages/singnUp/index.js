@@ -1,4 +1,3 @@
-// import { createAccount} from '../../services/index.js';
 import { onNavigate } from '../../utils/history.js';
 
 export const SignUp = () => {
@@ -20,7 +19,6 @@ export const SignUp = () => {
       <div class="error-message" id="singup-error">
       </div>
       <button class="btn button-area" id="button-register">Cadastre-se</button>
-      <button class="btn button-area" id="back-login">Login</button>
     </form>
 </div>
 
@@ -28,21 +26,14 @@ export const SignUp = () => {
 
   const emailButton = rootElement.querySelector('#register-email');
   const passwordButton = rootElement.querySelector('#register-password');
+  const username = rootElement.querySelector('#username');
   const registerButton = rootElement.querySelector('#button-register');
 
   registerButton.addEventListener('click', (event) => {
-    console.log('oi');
-    firebase.auth().createUserWithEmailAndPassword(emailButton.value, passwordButton.value);
-    console.log(emailButton.value);
-    console.log(passwordButton.value);
+    firebase.auth().createUserWithEmailAndPassword(emailButton.value, passwordButton.value,
+      username.value);
     event.preventDefault();
-    alert('Usuário cadastrado com sucesso!');
-  });
-
-  const linkLogin = rootElement.querySelector('#back-login');
-  linkLogin.addEventListener('click', (event) => {
-    event.preventDefault();
-    onNavigate('/');
+    onNavigate('/generalFeed');
   });
 
   return rootElement;

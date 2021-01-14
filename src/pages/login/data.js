@@ -1,21 +1,18 @@
 import { onNavigate } from '../../utils/history.js';
 
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+const usersCollection = firestore.collection('users');
+
 export const signIn = (email, password) => {
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((result) => {
-      window.location.pathname = '#feed';
+      window.location.pathname = '/generalFeed';
       return result;
-    })
-    .catch((error) => {
-      console.log(error);
     });
 };
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
-const usersCollection = firestore.collection('users');
 
 export const loginWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
