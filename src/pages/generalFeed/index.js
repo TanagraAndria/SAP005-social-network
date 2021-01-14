@@ -18,6 +18,14 @@ const setLogOutOnButton = () => {
   });
 };
 
+setTimeout(() => {
+  const floatingbtn = document.querySelector('#entraremcontato');
+  const socialpanelcontainer = document.querySelector('.social-panel-container');
+  floatingbtn.addEventListener('click', () => {
+    socialpanelcontainer.classList.toggle('visible');
+  });
+}, 10000);
+
 const getTextToPublish = () => {
   document.querySelector('#publish-btn').addEventListener('click', () => {
     createPost(document.querySelector('#postText').value);
@@ -388,3 +396,4 @@ export const generalFeed = () => {
   getUpLoadImgClick();
   readPost(loadPostTemplate);
 };
+
