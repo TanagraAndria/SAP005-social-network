@@ -1,12 +1,23 @@
 import { onNavigate } from '../../utils/history.js';
 
 export const signIn = (email, password) => {
-  firebase
-    .auth()
+  firebase.auth()
     .signInWithEmailAndPassword(email, password)
+    .then(() => {
+      const name = firebase.auth().currentUser.displayName;
+      alert(`Olá, ${name}!`);
+      window.location.hash = onNavigate('/generalFeed');
+    })
     .catch((error) => {
-      console.log(error);
-    });
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const msgError = 'Senha inválida ou usuário não cadastrado!';
+      console.log(errorCode);
+      console.log(errorMessage);
+      alert(msgError);
+      // ...
+      // eslint-disable-next-line no-unused-expressions
+    }); email - password.html;
 };
 
 const auth = firebase.auth();
@@ -33,8 +44,4 @@ export const loginWithGoogle = () => {
         alert('Essa conta já existe');
       }
     });
-};
-
-export const signOut = () => {
-  auth.signOut();
 };

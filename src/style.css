@@ -194,9 +194,12 @@ textarea {
 
 .photo {
 	width: 120px;
-	height: 113px;
-	border-radius: 89px;
-	border: 1px solid black;
+    height: 113px;
+    border-radius: 89px;
+    border: 1px solid black;
+	background-image: url(img/avatar.jpg);
+	background-color: white;
+    outline: none;
 }
 
 .photo:hover {

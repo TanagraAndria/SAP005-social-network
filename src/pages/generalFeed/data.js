@@ -1,3 +1,5 @@
+import { onNavigate } from '../../utils/history.js';
+
 const getData = () => {
   const data = new Date();
   return data.toLocaleString();
@@ -8,7 +10,8 @@ export const logOut = () => {
     .auth()
     .signOut()
     .then(() => {
-      window.location.pathname = '/';
+      alert('Sessão encerrada!');
+      window.location.pathname = onNavigate('/generalFeed');
     })
     .catch((error) => error);
 };
