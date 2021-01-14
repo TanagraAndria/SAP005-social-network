@@ -1,4 +1,4 @@
-import { loginWithGoogle } from './data.js';
+import { signIn, loginWithGoogle } from './data.js';
 import { onNavigate } from '../../utils/history.js';
 
 export const Login = () => {
@@ -30,10 +30,8 @@ export const Login = () => {
 
   const signInButton = rootElement.querySelector('#start');
   signInButton.addEventListener('click', (event) => {
-    event.preventDefault();
     signIn(email.value, password.value);
-    email.value = '';
-    password.value = '';
+    event.preventDefault();
   });
 
   const googleBtn = rootElement.querySelector('.btnGoogle');

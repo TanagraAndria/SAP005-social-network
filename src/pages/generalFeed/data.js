@@ -10,8 +10,7 @@ export const logOut = () => {
     .auth()
     .signOut()
     .then(() => {
-      alert('Sessão encerrada!');
-      window.location.pathname = onNavigate('/generalFeed');
+      window.location.pathname = onNavigate('/');
     })
     .catch((error) => error);
 };

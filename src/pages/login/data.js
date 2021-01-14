@@ -3,10 +3,9 @@ import { onNavigate } from '../../utils/history.js';
 export const signIn = (email, password) => {
   firebase.auth()
     .signInWithEmailAndPassword(email, password)
-    .then(() => {
-      const name = firebase.auth().currentUser.displayName;
-      alert(`Olá, ${name}!`);
+    .then((event) => {
       window.location.pathname = onNavigate('/generalFeed');
+      event.preventDefault();
     })
     .catch((error) => {
       const errorCode = error.code;
