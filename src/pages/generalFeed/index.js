@@ -120,7 +120,7 @@ const loadPostTemplate = (postList) => {
   <footer class='footer-post-box'>
     <section class='footer-post-icons-box'>
       <div class='footer-post-icons-items'>
-        <img class='post-area-icon' id="like-icon" src="../../img/like.png" alt="Like Icon">
+        <img class='post-area-icon' id="like-icon" src="../../img/like2.png" alt="Like Icon">
         <div id='likes-counter'>${likes.length}</div> 
         <div>
         
@@ -158,10 +158,8 @@ const loadPostTemplate = (postList) => {
     </section>
   </footer>
   `;
-
     postBox.querySelector('#send-comment').addEventListener('click', () => commentPosts(code, postBox.querySelector('#text-comment').value));
     postBox.querySelector('#like-icon').addEventListener('click', () => likePosts(code));
-
     postBox.classList.add('post-area');
     document.querySelector('#post-area').appendChild(postBox);
 
@@ -170,8 +168,6 @@ const loadPostTemplate = (postList) => {
     setEditPostClick(postBox);
   });
 };
-
-// Função executada com o carregamento da página:
 export const generalFeed = () => {
   document.querySelector('#root').innerHTML = '';
   const containerFeed = document.createElement('div');
@@ -182,7 +178,7 @@ export const generalFeed = () => {
         <img class='icon-logo' src='../../img/security.png' alt="Logotipo">
       </figure>                     
       <div>
-        <button class='circle signOut yellow'>
+        <button class='circle signOut'>
         <img class='icon-circle' src='../../img/logout.png'>
         </button>
       </div>
