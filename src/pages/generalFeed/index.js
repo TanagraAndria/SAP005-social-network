@@ -123,8 +123,7 @@ const loadPostTemplate = (postList) => {
         <img class='post-area-icon' id="like-icon" src="../../img/like.png" alt="Like Icon">
         <div id='likes-counter'>${likes.length}</div> 
         <div>
-        
-      </div>
+           </div>
       </div>
        
       <div class='footer-post-icons-items'>
@@ -139,7 +138,7 @@ const loadPostTemplate = (postList) => {
 
     <section class='footer-post-comments-box'>
     <div class='comments-box comments-box-textarea'>
-      <textarea required="required" placeholder='Deixe seu comentário' id="text-comment"></textarea>
+      <textarea required placeholder='Deixe seu comentário' id="text-comment"></textarea>
       <br>
       <div class="div-send-comment">
       <button aria-disabled="true" class="send-comment" tabindex="-1" data-visualcompletion="ignore" 
@@ -228,7 +227,7 @@ const loadPostTemplate = (postList) => {
 
   <footer>
 
-    <button class="floating-btn">
+    <button  class="floating-btn">
       Entrar em Contato
     </button>
     <div class="floating-text">
@@ -273,19 +272,22 @@ export const generalFeed = () => {
         <figure class='profile-area-photo-box'>
         
            <img class='photo'>
-           <input required="required" type="file" id="input-file-profileImg" class='input-file-profileImg transparency' accept=".jpg, .jpeg, .png">
+           <input required type="file" id="input-file-profileImg" class='input-file-profileImg transparency' accept=".jpg, .jpeg, .png">
         </figure>
         <div class='name-profile-area'>
           <h3 id='name-user'></h3>
         </div>
     </section>
         <section class='share-area'>
-          <textarea required="required" id='postText' placeholder='O que você quer compartilhar?'></textarea>
-           <div class='share-area-buttons'>
+         
+          <textarea  id='postText' placeholder='O que você quer compartilhar?'></textarea>
+          
+          <div class='share-area-buttons'>
+           
             <button id='publish-img-btn' class='circle violet'><img class='icon-circle' src='../../img/camera.png'></button>
             <div class='publish-img-form-box transparency'>
               <form method="post">
-                <input required="required" type="file" id="image_uploads" class='share-area-img-btn' accept=".jpg, .jpeg, .png">
+                <input required type="file" id="image_uploads" class='share-area-img-btn' accept=".jpg, .jpeg, .png">
                </form>
             </div>
             <button aria-disabled="true" tabindex="-1" id='publish-btn' class='btn btn-small publish-btn purple'>Publicar</button>
@@ -367,7 +369,7 @@ export const generalFeed = () => {
 
   <footer>
 
-    <button class="floating-btn">
+    <button id="entraremcontato" class="floating-btn">
       Entrar em Contato
     </button>
     <div class="floating-text">
@@ -388,3 +390,12 @@ export const generalFeed = () => {
   getUpLoadImgClick();
   readPost(loadPostTemplate);
 };
+
+setTimeout(() => {
+  const floatingbtn = document.querySelector('#entraremcontato');
+  const socialpanelcontainer = document.querySelector('.social-panel-container');
+  console.log(floatingbtn);
+  floatingbtn.addEventListener('click', () => {
+    socialpanelcontainer.classList.toggle('visible');
+  });
+}, 12000);
