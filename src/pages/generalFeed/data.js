@@ -21,7 +21,7 @@ export const createPost = (postText) => {
       .firestore()
       .collection('posts')
       .add({
-        user: `${firebase.auth().currentUser.email}`,
+        user: `${firebase.auth().currentUser.displayName}`,
         text: '',
         data: getData(),
         likes: [],

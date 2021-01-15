@@ -1,27 +1,17 @@
 import { onNavigate } from '../../utils/history.js';
 
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+const usersCollection = firestore.collection('users');
+
 export const signIn = (email, password) => {
   firebase.auth()
     .signInWithEmailAndPassword(email, password)
     .then((event) => {
       window.location.pathname = onNavigate('/generalFeed');
       event.preventDefault();
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const msgError = 'Senha inválida ou usuário não cadastrado!';
-      console.log(errorCode);
-      console.log(errorMessage);
-      alert(msgError);
-      // ...
-    // eslint-disable-next-line no-unused-expressions
-    }); email - password.html;
+    });
 };
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
-const usersCollection = firestore.collection('users');
 
 export const loginWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();

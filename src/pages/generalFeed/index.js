@@ -154,90 +154,7 @@ const loadPostTemplate = (postList) => {
      <p>${comment.text}</p>
     </div>
      `)) || ''}
-    </section>
-  </footer>
-  <footer class="social-panel-container">
-
-    <div class="social-panel">
-      <p>Criado com <i class="fa fa-heart"></i> por <br />
-        <a target="_blank" href="https://github.com/SaraOhara">Sara Viana</a>,
-        <a target="_blank" href="https://github.com/TanagraAndria">Tânagra Andria
-        </a>e
-        <a target="_blank" href="https://github.com/martinstfn">Stefany Martins</a></p>
-      <button class="close-btn"><i class="fas fa-times"></i></button>
-      <h4>Entre em Contato Sara Viana</h4>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/saraohara" target="_blank">
-            <i class="fab fa-linkedin"><img src="img/linkedin.png" alt="Acessar site linkedin" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/szkohara" target="_blank">
-            <i class="fab fa-facebook"> <img src="img/facebook.png" alt="Acessar site página Facebook" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/sz.ohara" target="_blank">
-            <i class="fab fa-instagram"> <img src="img/instagram.png" alt="Acessar site página instagram" /></i>
-          </a>
-        </li>
-      </ul>
-      <h4>Entre em Contato Tânagra Andria
-      </h4>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/t%C3%A2nagra-andria-b100862a/" target="_blank">
-            <i class="fab fa-linkedin"><img src="img/linkedin.png" alt="Acessar site linkedin" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://web.facebook.com/tanagraandria" target="_blank">
-            <i class="fab fa-facebook"> <img src="img/facebook.png" alt="Acessar site página Facebook" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/andriadesign/" target="_blank">
-            <i class="fab fa-instagram"> <img src="img/instagram.png" alt="Acessar site página instagram" /></i>
-          </a>
-        </li>
-      </ul>
-      <h4>Entre em Contato Stefany Martins
-      </h4>
-      <ul>
-        <li>
-          <a href="" target="_blank">
-            <i class="fab fa-linkedin"><img src="img/linkedin.png" alt="Acessar site linkedin" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://web.facebook.com/stefanymrt" target="_blank">
-            <i class="fab fa-facebook"> <img src="img/facebook.png" alt="Acessar site página Facebook" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/martinstfn/" target="_blank">
-            <i class="fab fa-instagram"> <img src="img/instagram.png" alt="Acessar site página instagram" /></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-
-  <footer>
-
-    <button  class="floating-btn">
-      Entrar em Contato
-    </button>
-    <div class="floating-text">
-      Projeto<a
-        href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
-        target="_blank"> Laboratória</a>
-    </div>
-
-  </footer>
-  
+    </section
   `;
     postBox.querySelector('#send-comment').addEventListener('click', () => commentPosts(code, postBox.querySelector('#text-comment').value));
     postBox.querySelector('#like-icon').addEventListener('click', () => likePosts(code));
@@ -293,92 +210,7 @@ export const generalFeed = () => {
             <button aria-disabled="true" tabindex="-1" id='publish-btn' class='btn btn-small publish-btn purple'>Publicar</button>
             
           </div>
-        </section>
-        <section id='post-area' class='posts-container'>
-        </section>
-      </div>
   </div>
-  <footer class="social-panel-container">
-
-    <div class="social-panel">
-      <p>Criado com <i class="fa fa-heart"></i> por <br />
-        <a target="_blank" href="https://github.com/SaraOhara">Sara Viana</a>,
-        <a target="_blank" href="https://github.com/TanagraAndria">Tânagra Andria
-        </a>e
-        <a target="_blank" href="https://github.com/martinstfn">Stefany Martins</a></p>
-      <button class="close-btn"><i class="fas fa-times"></i></button>
-      <h4>Entre em Contato Sara Viana</h4>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/saraohara" target="_blank">
-            <i class="fab fa-linkedin"><img src="img/linkedin.png" alt="Acessar site linkedin" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/szkohara" target="_blank">
-            <i class="fab fa-facebook"> <img src="img/facebook.png" alt="Acessar site página Facebook" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/sz.ohara" target="_blank">
-            <i class="fab fa-instagram"> <img src="img/instagram.png" alt="Acessar site página instagram" /></i>
-          </a>
-        </li>
-      </ul>
-      <h4>Entre em Contato Tânagra Andria
-      </h4>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/t%C3%A2nagra-andria-b100862a/" target="_blank">
-            <i class="fab fa-linkedin"><img src="img/linkedin.png" alt="Acessar site linkedin" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://web.facebook.com/tanagraandria" target="_blank">
-            <i class="fab fa-facebook"> <img src="img/facebook.png" alt="Acessar site página Facebook" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/andriadesign/" target="_blank">
-            <i class="fab fa-instagram"> <img src="img/instagram.png" alt="Acessar site página instagram" /></i>
-          </a>
-        </li>
-      </ul>
-      <h4>Entre em Contato Stefany Martins
-      </h4>
-      <ul>
-        <li>
-          <a href="" target="_blank">
-            <i class="fab fa-linkedin"><img src="img/linkedin.png" alt="Acessar site linkedin" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://web.facebook.com/stefanymrt" target="_blank">
-            <i class="fab fa-facebook"> <img src="img/facebook.png" alt="Acessar site página Facebook" /></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/martinstfn/" target="_blank">
-            <i class="fab fa-instagram"> <img src="img/instagram.png" alt="Acessar site página instagram" /></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-
-  <footer>
-
-    <button id="entraremcontato" class="floating-btn">
-      Entrar em Contato
-    </button>
-    <div class="floating-text">
-      Projeto<a
-        href="https://selecao.laboratoria.la/?fbclid=IwAR2QWpZCLRBDaovVAwYHcQLnDJKn6cjBGBbWUDLgiQPmEalCANY10YLkH0I"
-        target="_blank"> Laboratória</a>
-    </div>
-
-  </footer>
   `;
 
   document.querySelector('#root').appendChild(containerFeed);
@@ -390,12 +222,3 @@ export const generalFeed = () => {
   getUpLoadImgClick();
   readPost(loadPostTemplate);
 };
-
-setTimeout(() => {
-  const floatingbtn = document.querySelector('#entraremcontato');
-  const socialpanelcontainer = document.querySelector('.social-panel-container');
-  console.log(floatingbtn);
-  floatingbtn.addEventListener('click', () => {
-    socialpanelcontainer.classList.toggle('visible');
-  });
-}, 12000);
