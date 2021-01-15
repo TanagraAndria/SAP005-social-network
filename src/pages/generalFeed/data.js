@@ -33,7 +33,7 @@ export const createPost = (postText) => {
       .firestore()
       .collection('posts')
       .add({
-        user: `${firebase.auth().currentUser.email}`,
+        user: `${firebase.auth().currentUser.displayName}`,
         data: getData(),
         text: postText,
         likes: [],
@@ -51,6 +51,7 @@ export const readPost = (callbackToManipulatePostList) => {
     .onSnapshot((snapshot) => {
       const post = [];
       snapshot.forEach((doc) => {
+        console.log(doc.data());
         const {
           user,
           data,

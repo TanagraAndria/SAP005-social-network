@@ -7,10 +7,21 @@ const usersCollection = firestore.collection('users');
 export const signIn = (email, password) => {
   firebase.auth()
     .signInWithEmailAndPassword(email, password)
-    .then((event) => {
-      window.location.pathname = onNavigate('/generalFeed');
-      event.preventDefault();
-    });
+    .then(() => {
+      const name = firebase.auth().currentUser.displayName;
+      alert(`Olá, ${name}!`);
+      onNavigate('/generalFeed');
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const msgError = 'Senha inválida ou usuário não cadastrado!';
+      console.log(errorCode);
+      console.log(errorMessage);
+      alert(msgError);
+      // ...
+      // eslint-disable-next-line no-unused-expressions
+    }); email - password.html;
 };
 
 export const loginWithGoogle = () => {

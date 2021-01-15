@@ -380,10 +380,6 @@ textarea {
 	opacity: 0;
 }
 
-.visibility {
-	visibility: hidden;
-}
-
 .display-none {
 	display: none;
 }
@@ -534,4 +530,12 @@ textarea {
 	color: #fff23e;
 	text-decoration: none;
 	font-weight: 300;
+}
+
+.deu-like {
+	content: url('img/like.png') !important;
+}
+
+.nao-deu-like {
+	content: url('img/like2.png') !important;
 }
