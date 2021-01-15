@@ -9,7 +9,7 @@ export const registerLogin = (email, password, name, location) => {
       .createUserWithEmailAndPassword(email, password)
       .then(() => firebase.auth().currentUser.updateProfile({ displayName: name }))
       .then(() => {
-        window.location.pathname = onNavigate('/generalFeed');
+        onNavigate('/generalFeed');
         const uid = firebase.auth().currentUser.uid;
         const user = {
           emailUser: email,

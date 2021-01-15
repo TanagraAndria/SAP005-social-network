@@ -52,6 +52,7 @@ export const readPost = (callbackToManipulatePostList) => {
     .onSnapshot((snapshot) => {
       const post = [];
       snapshot.forEach((doc) => {
+        console.log(doc.data());
         const {
           user,
           data,

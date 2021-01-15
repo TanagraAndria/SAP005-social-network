@@ -6,7 +6,7 @@ export const signIn = (email, password) => {
     .then(() => {
       const name = firebase.auth().currentUser.displayName;
       alert(`Olá, ${name}!`);
-      window.location.pathname = onNavigate('/generalFeed');
+      onNavigate('/generalFeed');
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -16,7 +16,7 @@ export const signIn = (email, password) => {
       console.log(errorMessage);
       alert(msgError);
       // ...
-    // eslint-disable-next-line no-unused-expressions
+      // eslint-disable-next-line no-unused-expressions
     }); email - password.html;
 };
 
