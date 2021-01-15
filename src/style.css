@@ -191,7 +191,7 @@ textarea {
 	height: 113px;
 	border-radius: 89px;
 	border: 1px solid black;
-	background-color: white;
+	background-image: url(img/avatar.jpg);
 	outline: none;
 }
 
@@ -358,7 +358,7 @@ textarea {
 	margin-left: 5px;
 }
 
-.edit-save-btn{
+.edit-save-btn {
 	border: solid WHITE;
 	width: 100px;
 	border-radius: 20px;
@@ -391,10 +391,12 @@ textarea {
 	opacity: 0;
 }
 
+
 .visibility {
 	visibility: hidden;
 
 }
+
 
 .display-none {
 	display: none;
@@ -530,31 +532,11 @@ textarea {
 	outline: none;
 }
 
-.floating-text {
-	background-color: #9a55a6;
-	border-radius: 10px 10px 0 0;
-	color: #fff;
-	font-family: 'Muli';
-	padding: 7px 15px;
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
+.deu-like {
+	content: url('img/like.png') !important;
 }
 
-.floating-text a {
-	color: #fff23e;
-	text-decoration: none;
-	font-weight: 300;
-}
-
-.deu-like{
-	content: url('img/like.png')!important;
-
-}
-
-.nao-deu-like{
-	content: url('img/like2.png')!important;
-
+.nao-deu-like {
+	content: url('img/like2.png') !important;
 }
 

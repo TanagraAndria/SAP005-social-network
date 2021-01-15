@@ -30,10 +30,8 @@ export const Login = () => {
 
   const signInButton = rootElement.querySelector('#start');
   signInButton.addEventListener('click', (event) => {
-    event.preventDefault();
     signIn(email.value, password.value);
-    email.value = '';
-    password.value = '';
+    event.preventDefault();
   });
 
   const googleBtn = rootElement.querySelector('.btnGoogle');

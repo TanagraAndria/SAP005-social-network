@@ -10,7 +10,6 @@ export const logOut = () => {
     .auth()
     .signOut()
     .then(() => {
-      alert('Sessão encerrada!');
       onNavigate('/');
     })
     .catch((error) => error);

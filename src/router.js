@@ -20,11 +20,7 @@ const routeRender = () => {
 window.addEventListener('popstate', routeRender);
 window.addEventListener('load', () => {
   document
-    .getElementById('login')
-    .addEventListener('click', (e) => {
-      e.preventDefault();
-      onNavigate('/');
-    });
+    .getElementById('login');
   document
     .getElementById('start')
     .addEventListener('click', (e) => {

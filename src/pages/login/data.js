@@ -1,5 +1,9 @@
 import { onNavigate } from '../../utils/history.js';
 
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+const usersCollection = firestore.collection('users');
+
 export const signIn = (email, password) => {
   firebase.auth()
     .signInWithEmailAndPassword(email, password)
@@ -19,10 +23,6 @@ export const signIn = (email, password) => {
       // eslint-disable-next-line no-unused-expressions
     }); email - password.html;
 };
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
-const usersCollection = firestore.collection('users');
 
 export const loginWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();

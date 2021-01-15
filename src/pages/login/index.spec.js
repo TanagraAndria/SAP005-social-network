@@ -1,7 +1,7 @@
-// import { Home } from './index.js';
+import { Login } from './index.js';
 
-describe('Home', () => {
+describe('Login', () => {
   it('should be a function', () => {
-    expect(typeof Home).toBe('function');
+    expect(typeof Login).toBe('function');
   });
 });
