@@ -1,12 +1,26 @@
 /*-----------------Responsividade ---------------------*/
-
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 	.post-area-image {
 		width: 40%;
 		height: 60%;
 		margin: 1% 30%;
 	}
-}
+
+	.name-profile-arewidth {
+		width:	40%;
+		height: 60%;
+		margin: 1% 30%;
+	}
+
+	.logos-home {
+		
+       height: 150px;
+	}
+	
+	.logos-home {
+		width: 60%;
+		height: 40%;
+	}
 
 @media only screen and (min-width: 1024px) {
 	.profile-area {
@@ -17,16 +31,19 @@
 		margin-top: 10px;
 		padding: 0px;
 	}
+
 	.profile-area-theme {
 		background-color: lightgray;
 		width: 100%;
 		height: 50%;
 		margin-bottom: 10px;
 	}
+
 	.share-area,
 	.post-area {
 		height: fit-content;
 	}
+
 	.box-feed {
 		display: flex;
 		flex-direction: row;
@@ -34,9 +51,15 @@
 		width: 100%;
 		margin: auto;
 	}
+
+	.button-area {
+		width: 50%;
+	}
+	
 	.share-and-post {
 		width: 60%;
 	}
+
 	.profile-area-photo-box {
 		display: flex;
 		flex-direction: column;
@@ -44,26 +67,20 @@
 		width: 80%;
 		padding-top: 0px;
 	}
+
 	.slogan-desktop {
 		display: block;
 	}
+
 	.box {
 		flex-direction: row;
 		height: 600px;
 	}
+
 	.box-item {
 		width: 50%;
 	}
-	.logos-home {
-		width: 60%;
-		height: 40%;
-	}
-	.login-area {
-		width: 55%;
-	}
-	.button-area {
-		width: 35%;
-	}
+}
 	.post-area-image {
 		margin: 0px;
 		width: 70%;
@@ -74,7 +91,6 @@
 		width: 100%;
 		height: 237px;
 	}
-
 	
 }
 @media only screen and (min-width: 1440px) {
