@@ -4,6 +4,7 @@
 		height: 60%;
 		margin: 1% 30%;
 	}
+
 	.name-profile-arewidth {
 		width: 40%;
 		height: 60%;
@@ -18,8 +19,20 @@
 		width: 60%;
 		height: 40%;
 	}
+	.profile-area {
+		justify-content: space-between;
+		height: 345px;
+		border: 2px solid rgb(252, 221, 221);
+		border-radius: 4px;
+		margin-top: 10px;
+		padding: 0px;
+	}
+	.theme-image {
+		display: flex;
+		width: 208%;
+		height: 125px;
+	}
 }
-
 @media only screen and (min-width: 1024px) {
 	.profile-area {
 		flex-direction: column;
@@ -85,7 +98,7 @@
 	margin: 1% 15%;
 }
 .theme-image {
-	display: block;
+	display: flex;
 	width: 100%;
 	height: 237px;
 }

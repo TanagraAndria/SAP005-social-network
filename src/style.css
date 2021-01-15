@@ -79,7 +79,6 @@ textarea {
 
 .logos-home {
 	width: 220px;
-	
 }
 
 .font-small {
@@ -164,7 +163,11 @@ textarea {
 	outline: none;
 }
 
-.profile-area,
+.profile-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .share-area {
 	display: flex;
 	align-items: center;
@@ -395,12 +398,9 @@ textarea {
 	opacity: 0;
 }
 
-
 .visibility {
 	visibility: hidden;
-
 }
-
 
 .display-none {
 	display: none;
@@ -543,4 +543,3 @@ textarea {
 .nao-deu-like {
 	content: url('img/like2.png') !important;
 }
-
