@@ -83,7 +83,7 @@ const setEditPostClick = (element) => {
 };
 
 const visibilityOfElementsToCurrentUser = (postBox, user) => {
-  if (user !== firebase.auth().currentUser.email) {
+  if (user !== firebase.auth().currentUser.displayName) {
     postBox.querySelector('.delete-btn').classList.add('visibility');
     postBox.querySelector('.edit-btn').classList.add('visibility');
   }
