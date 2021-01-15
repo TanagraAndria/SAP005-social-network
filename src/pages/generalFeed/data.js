@@ -10,7 +10,7 @@ export const logOut = () => {
     .auth()
     .signOut()
     .then(() => {
-      window.location.pathname = onNavigate('/');
+      onNavigate('/');
     })
     .catch((error) => error);
 };
@@ -33,7 +33,7 @@ export const createPost = (postText) => {
       .firestore()
       .collection('posts')
       .add({
-        user: `${firebase.auth().currentUser.email}`,
+        user: `${firebase.auth().currentUser.displayName}`,
         data: getData(),
         text: postText,
         likes: [],
@@ -107,12 +107,51 @@ export const changeProfileImage = (file, callbackToSetNewImage) => {
     });
 };
 
+export const likeOrDislike = (postID, idDoUsuario) => {
+  firebase
+    .firestore()
+    .collection('posts')
+    .doc(postID)
+    .get()
+    .then((snapshot) => {
+      const dados = snapshot.data();
+
+      if (dados.likes && !dados.likes.includes(idDoUsuario)) {
+        firebase
+          .firestore()
+          .collection('posts')
+          .doc(postID)
+          .update({
+            likes: firebase.firestore.FieldValue
+              .arrayUnion(firebase.auth().currentUser.uid),
+          });
+      } else {
+        firebase
+          .firestore()
+          .collection('posts')
+          .doc(postID)
+          .update({
+            likes: firebase.firestore.FieldValue
+              .arrayRemove(firebase.auth().currentUser.uid),
+          });
+      }
+    });
+};
+
 export const likePosts = (postID) => {
   firebase
     .firestore()
     .collection('posts')
     .doc(postID)
     .update({ likes: firebase.firestore.FieldValue.arrayUnion(firebase.auth().currentUser.uid) });
+};
+
+export const dislike = (postID) => {
+  firebase
+    .firestore()
+    .collection('posts')
+    .doc(postID)
+    .update({ likes: firebase.firestore.FieldValue.arrayRemove(firebase.auth().currentUser.uid) });
 };
 
 export const commentPosts = (postID, textContent) => {

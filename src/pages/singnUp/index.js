@@ -10,7 +10,7 @@ export const SignUp = () => {
 
 </div>
 
-<div class='box-item'>
+  <div class='box-item'>
   <h3>CRIAR UMA NOVA CONTA</h3>
   <form method='post'>
     <input required="required" autocomplete="off" type="text" placeholder="Insira seu nome" id="username"
