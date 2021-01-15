@@ -194,7 +194,7 @@ textarea {
 	height: 113px;
 	border-radius: 89px;
 	border: 1px solid black;
-	background-color: white;
+	background-image: url(img/avatar.jpg);
 	outline: none;
 }
 
