@@ -45,3 +45,11 @@ export const loginWithGoogle = () => {
       }
     });
 };
+
+// Créditos Finais
+const floatingbtn = document.querySelector('#entraremcontato');
+const socialpanelcontainer = document.querySelector('.social-panel-container');
+
+floatingbtn.addEventListener('click', () => {
+  socialpanelcontainer.classList.toggle('visible');
+});

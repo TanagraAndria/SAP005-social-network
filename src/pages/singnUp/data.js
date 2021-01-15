@@ -1,8 +1,8 @@
 /* eslint-disable object-shorthand */
 import { onNavigate } from '../../utils/history.js';
 
-export const registerLogin = (email, password, name, location) => {
-  if (email === '' || password === '' || name === '' || location === '') {
+export const registerLogin = (email, password, name) => {
+  if (email === '' || password === '' || name === '') {
     alert('Preencha os campos em branco');
   } else {
     firebase.auth()
