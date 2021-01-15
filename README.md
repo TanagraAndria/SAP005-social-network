@@ -6,7 +6,10 @@
 - [1. Introdução](#1-introdução)
 - [2. Resumo do projeto](#2-resumo-do-projeto)
 - [3. Personas](#3-personas)
-- [4. Protótipos](#4-protótipos)
+- [4. Funcionalidades](#4-funcionalidades)
+- [5. Protótipos](#5-protótipos)
+- [6. Aprendizado](#4-aprendizado)
+- [. Desenvolvido por](#-desenvolvido-por)
 
 ---
 
@@ -26,4 +29,35 @@ Na SECURITY PET o usuário terá contato com profissionais da voltados a todo ti
 ### 3. Personas
 ![alt text](src/img/personas.png)
 
-### 4. Protótipos
+### 4.Funcionalidades
+Novos usuários podem se cadastrar na rede através do cadastro do próprio site ou pelo login do Google;
+Usuários já cadastrados podem acessar a plataforma através de email e senha ou pelo login do Google;
+No feed de postagens é possível visualizar todas as postagens, tanto do usuário logado quanto de outros usuários, ordenadas das mais recentes às mais antigas. 
+O usuário pode publicar texto, imagens e gifs em seus posts e também podem editar e deletar seus posts após publicado;
+Os usuários podem dar like ou desfazê-lo, além de comentar um post.
+No perfil o usuário pode editar a imagem do seu perfil.
+
+### 5. Protótipos
+![alt text](src/img/redesocial.png)
+
+### 6. Aprendizado
+Aprendizado:
+Manipulação da maior parte do layout da página em Flexbox - CSS
+Uso de callbacks, consumo de Promises e uso de ES Modules - JS
+Firebase Authentication, Firestore, onSnapshot, onAuthStateChanged e Firebase Hosting - Firebase
+Colaboração por Git e GitHub.
+
+Tecnologias Ultilizadas: 
+* HTML5 semântico
+* Conceitos fundamentais de CSS3
+*  Mobile first
+* VanillaJS / JavaScript (ES6+)
+* Sistema de rotas / (SPA)
+ * Trello
+ Node.js
+ Firebase
+
+### .Desenvolvido por:
+*[Tânagra Andria](https://github.com/martinstfn)
+*[Sara Viana](https://github.com/SaraOhara) 
+*[Sara Viana](https://github.com/SaraOhara)
