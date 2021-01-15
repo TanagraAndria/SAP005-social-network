@@ -27,12 +27,6 @@ export const loginWithGoogle = () => {
           photo: user.photoURL,
         }, { merge: true });
       onNavigate('/generalFeed');
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      if (errorCode === 'auth/account-exists-with-different-credential') {
-        alert('Essa conta já existe');
-      }
     });
 };
 

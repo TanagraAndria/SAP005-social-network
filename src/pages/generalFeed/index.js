@@ -129,8 +129,8 @@ const loadPostTemplate = (postList) => {
         <div>${comments.length}</div>
       </div>
       
-      <div class='edit-btn'><img class='post-area-icon' src="./img/pencil.png" alt="Edit Icon"></div>
-      <button class='delete-btn' data-id='${code}'><img class='post-area-icon-del' src="./img/quit.png" alt="Edit Icon">
+      <div class='edit-btn'><img class='post-area-icon' src="../../img/pencil.png" alt="Edit Icon"></div>
+      <button class='delete-btn' data-id='${code}'><img class='post-area-icon-del' src="../../img/quit.png" alt="Edit Icon">
         </button>
     </section>
     <section class='footer-post-comments-box'>
