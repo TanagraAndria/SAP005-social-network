@@ -58,6 +58,6 @@ Tecnologias Ultilizadas:
  Firebase
 
 ### .Desenvolvido por:
-*[Tânagra Andria](https://github.com/martinstfn)
-*[Sara Viana](https://github.com/SaraOhara) 
-*[Sara Viana](https://github.com/SaraOhara)
+*[Tânagra Andria](https://github.com/TanagraAndria)
+*[Sara Viana](https://github.com/SaraOhara)  
+*[Stêfani Martins](https://github.com/martinstfn)
