@@ -50,8 +50,10 @@ Uso de callbacks, consumo de Promises e uso de ES Modules - JS
 Firebase Authentication, Firestore, onSnapshot, onAuthStateChanged e Firebase Hosting - Firebase
 Colaboração por Git e GitHub.
 
-![alt text](src/img/rede.gif)
+![alt text](src/img/rede.gif
+
 Tecnologias Ultilizadas: 
+
 * HTML5 semântico
 * Conceitos fundamentais de CSS3
 *  Mobile first
