@@ -1,6 +1,9 @@
 # Criando uma Rede Social
 ![alt text](src/img/security.png)
 ![alt text](src/img/mockupRedeSocial.jpg)
+
+<b> *Acesse a aplicação [Aqui](https://rede-social-85909.web.app/) 
+
 ## Índice
 
 - [1. Introdução](#1-introdução)
@@ -47,6 +50,7 @@ Uso de callbacks, consumo de Promises e uso de ES Modules - JS
 Firebase Authentication, Firestore, onSnapshot, onAuthStateChanged e Firebase Hosting - Firebase
 Colaboração por Git e GitHub.
 
+![alt text](src/img/rede.gif)
 Tecnologias Ultilizadas: 
 * HTML5 semântico
 * Conceitos fundamentais de CSS3
